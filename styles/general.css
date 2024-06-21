@@ -1,0 +1,64 @@
+:root {
+    --info: #3498db;
+    --resaltar: orange;
+}
+
+* {
+    font-family: Monaco, Helvetica, sans-serif;
+}
+
+.tema-claro {
+    background-color: #ffd0aa;
+    color: black;
+    border-color: black;
+}
+
+.tema-oscuro {
+    background-color: #333333;
+    color: white;
+    border-color: white;
+}
+
+.correcto {
+    background-color: green !important;
+    color: white !important;
+}
+
+.incorrecto {
+    background-color: red !important;
+    color: white !important;
+}
+
+.resaltar {
+    background-color: var(--resaltar);
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+button {
+    cursor: pointer;
+}
+
+#btnCorregir {
+    font-weight: bold;
+    background-color: red;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    width: 100px;
+}
+
+#btnRetroceso {
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.caja {
+    border: 2px solid;
+    background-color: rgba(0, 0, 0, 0.1);
+}

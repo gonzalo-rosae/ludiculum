@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#contenedorGeneral {
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo {
+    font-weight: bold;
+}
+
+.info-icon {
+    font-weight: 700;
+    font-style: oblique;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+}
+
+input[type="text"] {
+    width: 150px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+input[type="button"],
+.buttonLike {
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: var(--info);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.colEntrada {
+    margin-bottom: 20px;
+}
+
+.correccion {
+    font-size: 14px;
+}
+
+table {
+    margin-left: 0px;
+}
+
+.resaltar {
+    width: 100%;
+    border-bottom: 2px solid;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.botones {
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    border-top: 2px solid;
+}
+
+.botones button {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 50%;
+    background-color: var(--info);
+    box-shadow: 0;
+    border: 0;
+    color: white;
+}
+
+#lineaVertical {
+    border-left: 2px solid;
+    height: 50px;
+}
+
+#lineaVertical.tema-claro {
+    border-color: black;
+}
+
+#lineaVertical.tema-oscuro {
+    border-color: white;
+}

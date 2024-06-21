@@ -1,0 +1,116 @@
+body {
+    font-size: 18px;
+}
+
+#envoltorioTitulo {
+    text-align: center;
+    height: 50px;
+}
+
+#titulo {
+    margin-left: 70px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#listado {
+    padding: 25px 35px 35px 50px;
+}
+
+.ejemplo {
+    font-style: italic;
+    margin-left: 30px;
+}
+
+.sangria {
+    margin-left: 30px;
+}
+
+.italica {
+    font-style: italic;
+}
+
+.sep {
+    margin-top: 30px;
+}
+
+.centrar {
+    text-align: center;
+}
+
+tr, th {
+    border: 1px solid;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid;
+}
+
+.oculto {
+    display: none;
+}
+
+h2 {
+    display: inline;
+    font-size: 26px;
+}
+
+button {
+    display: inline;
+}
+
+button {
+    border-radius: 5px;
+    width: 24px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.margen {
+    margin: 30px;
+}
+
+.inline {
+    display: inline;
+}
+
+.toggle-btn {
+    margin-bottom: 10px;
+}
+
+.toggle-btn span {
+    font-weight: bold;
+}
+
+.seccion {
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border: 2px solid;
+}
+
+table {
+    padding: 10px;
+}
+
+.inline {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+.sangrado {
+    border: 1px solid;
+    margin-left: 30px;
+    padding-left: 10px;
+}

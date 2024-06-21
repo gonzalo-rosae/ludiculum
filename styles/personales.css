@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    margin: 20px auto;
+    padding: 0px;
+    padding-top: 0;
+    max-width: 640px;
+}
+
+h2 {
+    font-weight: bold;
+    display: inline-block;
+}
+
+h3 {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 160px;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+#cabecera {
+    border-bottom: 2px solid;
+}
+
+.info-icon {
+    font-weight: 700;
+    font-style: oblique;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 150px !important;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+input[type="button"] {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    float: right !important;
+    margin-right: 10px !important;
+}
+
+.declensionTestHolder {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.declensionTestTable {
+    max-width: 250px;
+}
+
+.colEntrada {
+    margin-bottom: 20px;
+}
+
+.correccion {
+    font-size: 14px !important;
+}
+
+#traduccion {
+    margin-top: 0 !important;
+}

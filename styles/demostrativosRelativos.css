@@ -1,0 +1,88 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    display: inline-block;
+}
+
+h3 {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 160px;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+#cabecera {
+    margin-bottom: 25px;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+}
+
+th, tr, td {
+    border: 1.5px solid;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+input[type="button"] {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    float: right !important;
+    margin-right: 10px !important;
+}
+
+.declensionTestTable {
+    display: inline-block;
+    width: 45%;
+    margin-right: 10px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.colEntrada {
+    margin-bottom: 20px;
+}
+
+.correccion {
+    font-size: 14px !important;
+}
+
+#traduccion {
+    margin-top: 0 !important;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.triple {
+    width: 97% !important;
+}
