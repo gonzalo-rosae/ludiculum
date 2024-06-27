@@ -76,7 +76,7 @@ $verb = getRandomVerb();
                 </tbody>
             </table>
         </div>
-        <input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+        <?php include '../widgets/btnCorregir.php'; ?>
     </li>
 
 
@@ -193,9 +193,9 @@ $verb = getRandomVerb();
 
             // Marcamos el botón del tiempo actual y desmarcamos los otros
             Array.from(document.getElementsByClassName("tiempo")).forEach(function (elemento) {
-                elemento.classList.remove('resaltar');
+                elemento.classList.remove('marcarTiempoActual');
             });
-            document.getElementById(tiempo).classList.add('resaltar');
+            document.getElementById(tiempo).classList.add('marcarTiempoActual');
         }
 
     </script>

@@ -30,7 +30,7 @@ $ejercicios = getRandomExercises(5);
         ?>
     </div>
     <p class="cursiva">Nota: en algún ejercicio puede haber más de una solución correcta.</p>
-    <input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+    <?php include '../widgets/btnCorregir.php'; ?>
 
 
     <script>

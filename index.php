@@ -43,7 +43,7 @@ require_once ("database.php");
         <p></p>
     </div>
     <div id="footer2">
-        <p>© Todos los derechos reservados</p>
+        <p></p>
     </div>
 
     <body>

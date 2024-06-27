@@ -67,29 +67,29 @@ const textos = {
         personaActual: "Primera persona",
         singular: "singular",
         plural: "plural",
-        nominativo: "Nom./Voc.",
-        vocativo: "Vocativo",
-        acusativo: "Acusativo",
-        genitivo: "Genitivo",
-        dativo: "Dativo",
-        ablativo: "Ablativo",
+        nominativo: "nom. / voc.",
+        vocativo: "vocativo",
+        acusativo: "acusativo",
+        genitivo: "genitivo",
+        dativo: "dativo",
+        ablativo: "ablativo",
         masculino: "masculino",
         femenino: "femenino",
         neutro: "neutro"
     },
     la: {
         titulo: "Pronomina demonstrativa",
-        btnNuevaPalabra: "Nova vox ↺",
-        btnCorregir: "Castigare 🗸",
+        btnNuevaPalabra: "Alia vox ↺",
+        btnCorregir: "Corrige 🗸",
         personaActual: "Prima persona",
         singular: "singularis",
         plural: "pluralis",
-        nominativo: "Nom./Voc.",
-        vocativo: "Vocativus",
-        acusativo: "Accusativus",
-        genitivo: "Genitivus",
-        dativo: "Dativus",
-        ablativo: "Ablativus",
+        nominativo: "nom. / voc.",
+        vocativo: "vocativus",
+        acusativo: "accusativus",
+        genitivo: "genetivus",
+        dativo: "dativus",
+        ablativo: "ablativus",
         masculino: "masculinum",
         femenino: "femininum",
         neutro: "neutrum"
@@ -117,8 +117,8 @@ function aplicarIdioma(codigoIdioma) {
     tablasPlural[2].innerText = textos[codigoIdioma].femenino;
     tablasPlural[3].innerText = textos[codigoIdioma].neutro;
 
-    const labelsSingular = document.getElementById("singular").querySelectorAll("tbody td.cursiva");
-    const labelsPlural = document.getElementById("plural").querySelectorAll("tbody td.cursiva");
+    const labelsSingular = document.getElementById("singular").querySelectorAll("tbody th");
+    const labelsPlural = document.getElementById("plural").querySelectorAll("tbody th");
 
     const labelsText = [
         textos[codigoIdioma].nominativo, textos[codigoIdioma].acusativo,

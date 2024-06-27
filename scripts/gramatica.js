@@ -13,9 +13,9 @@ function toggleSection(id, button) {
 const textos = {
     es: {
         titulo: "Gramática",
-        dativo: "Dativo de posesión",
+        dativoPos: "Dativo de posesión",
         adjetivos: "Tipos de adjetivo",
-        comparativo: "Comparativo",
+        comparativo: "Adjetivo comparativo",
         ccl: "Complemento Circunstancial de Lugar",
         pasiva: "Pasiva",
         coordinadas: "Coordinadas",
@@ -24,12 +24,12 @@ const textos = {
 
         singular: "singular",
         plural: "plural",
-        nominativo: "Nominativo",
-        vocativo: "Vocativo",
-        acusativo: "Acusativo",
-        genitivo: "Genitivo",
-        dativo: "Dativo",
-        ablativo: "Ablativo",
+        nominativo: "nominativo",
+        vocativo: "vocativo",
+        acusativo: "acusativo",
+        genitivo: "genitivo",
+        dativo: "dativo",
+        ablativo: "ablativo",
 
         masculino: "masculino",
         femenino: "femenino",
@@ -43,9 +43,9 @@ const textos = {
     },
     la: {
         titulo: "Grammatica",
-        dativo: "Dativus possessionis",
+        dativoPos: "Dativus possessionis",
         adjetivos: "Genera adjectivorum",
-        comparativo: "Comparativus",
+        comparativo: "Adjectivum comparativum",
         ccl: "Complementa ad Circunstantis Locorum",
         pasiva: "Passiva",
         coordinadas: "Sententiae coordinatae",
@@ -54,12 +54,12 @@ const textos = {
 
         singular: "singularis",
         plural: "pluralis",
-        nominativo: "Nominativus",
-        vocativo: "Vocativus",
-        acusativo: "Accusativus",
-        genitivo: "Genitivus",
-        dativo: "Dativus",
-        ablativo: "Ablativus",
+        nominativo: "nominativus",
+        vocativo: "vocativus",
+        acusativo: "accusativus",
+        genitivo: "genetivus",
+        dativo: "dativus",
+        ablativo: "ablativus",
 
         masculino: "masculinum",
         femenino: "femininum",
@@ -86,7 +86,7 @@ function aplicarIdioma(codigoIdioma) {
 
     document.getElementById("titulo").innerText = textos[codigoIdioma].titulo;
 
-    document.querySelector('#dativo').previousElementSibling.innerText = textos[codigoIdioma].dativo;
+    document.querySelector('#dativo').previousElementSibling.innerText = textos[codigoIdioma].dativoPos;
     document.querySelector('#adjetivos').previousElementSibling.innerText = textos[codigoIdioma].adjetivos;
     document.querySelector('#comparativo').previousElementSibling.innerText = textos[codigoIdioma].comparativo;
     document.querySelector('#ccl').previousElementSibling.innerText = textos[codigoIdioma].ccl;

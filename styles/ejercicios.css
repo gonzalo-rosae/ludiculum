@@ -27,8 +27,8 @@ input[type="text"] {
 input[type="button"] {
     padding: 10px;
     font-size: 14px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--colorSecundario);
+    color: white;
     border: none;
     cursor: pointer;
     margin-top: 5px;
@@ -64,5 +64,5 @@ p {
 
 .sobrepasar:hover {
     cursor: pointer;
-    background-color: orangered;
+    background-color: var(--colorPrimario);
 }

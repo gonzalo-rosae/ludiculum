@@ -44,7 +44,7 @@
             <button id="btnSentidoInverso" onclick="cambiarSentido()">Sentido inverso</button>
         </div>
     </div>
-    <input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+    <?php include '../widgets/btnCorregir.php'; ?>
 </body>
 
 <script>
@@ -58,10 +58,19 @@
     crearSoluciones("traduccion");
 
     function cambiarSentido() {
-        var prompt, solucion;
+        var prompt, solucion, sentido1, sentido2;
         var cabecera = document.getElementById("cabecera");
 
-        cabecera.innerText = (cabecera.innerText == "español → latín") ? "latín → español" : "español → latín";
+        if (getIdiomaActual() == "es") {
+            sentido1 = "español → latín";
+            sentido2 = "latín → español";
+        }
+        else {
+            sentido1 = "hispanice → latine";
+            sentido2 = "latine → hispanice";
+        }
+        cabecera.innerText = (cabecera.innerText == sentido1) ? sentido2 : sentido1;
+        
         limpiarCampos();
         soluciones = [];
         sentidoActual = (sentidoActual == "la-es") ? "es-la" : "la-es";

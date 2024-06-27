@@ -12,35 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const textos = {
     es: {
-        btnIdioma: "Cambiar idioma",
-        btnTema: "☀️",
+        btnIdioma: "Latín",
         titulo: "Ludiculum",
         sustantivos: "Sustantivos",
         verbos: "Verbos",
-        personales: "Personales",
-        demostrativos: "Demostrativos",
-        relativos: "Relativos",
+        personales: "P. Personales",
+        demostrativos: "P. Demostrativos",
+        relativos: "P. Relativos",
         vocabulario: "Vocabulario",
         ejercicios: "Ejercicios",
         gramatica: "Gramática",
         footer1: "Autor: Gonzalo de la Rosa Palacio",
-        footer2: "Revisión: Eduardo del Pino",
+        footer2: "Revisión: Eduardo del Pino y Sandra Ramos",
         derechos: "© Todos los derechos reservados"
     },
     la: {
-        btnIdioma: "Mutare lingua",
-        btnTema: "☀️",
+        btnIdioma: "Hispanice",
         titulo: "Ludiculum",
         sustantivos: "Substantiva",
         verbos: "Verba",
-        personales: "Personalia",
-        demostrativos: "Demonstrativa",
-        relativos: "Relativa",
+        personales: "P. Personalia",
+        demostrativos: "P. Demonstrativa",
+        relativos: "P. Relativa",
         vocabulario: "Vocabularium",
         ejercicios: "Exercitia",
         gramatica: "Grammatica",
         footer1: "Auctor: Gonzalo de la Rosa Palacio",
-        footer2: "Revisio: Eduardo del Pino",
+        footer2: "Revisio: Eduardo del Pino et Sandra Ramos",
         derechos: "© Omnia iura reservata"
     }
 };
@@ -54,8 +52,8 @@ function cambiarIdioma() {
 
 function aplicarIdioma(codigoIdioma) {
     document.documentElement.lang = codigoIdioma;
+    document.getElementById("btnTema").innerText = (getTemaActual() == "claro") ? "🌑" : "☀️";
     document.getElementById("btnIdioma").innerText = textos[codigoIdioma].btnIdioma;
-    document.getElementById("btnTema").innerText = textos[codigoIdioma].btnTema;
     document.getElementById("titulo").innerText = textos[codigoIdioma].titulo;
     document.querySelectorAll("a")[0].innerText = textos[codigoIdioma].sustantivos;
     document.querySelectorAll("a")[1].innerText = textos[codigoIdioma].verbos;

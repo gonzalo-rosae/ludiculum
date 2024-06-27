@@ -12,8 +12,8 @@ const textos = {
     },
     la: {
         titulo: "Verba",
-        btnNuevaPalabra: "Nova vox ↺",
-        btnCorregir: "Castigare 🗸",
+        btnNuevaPalabra: "Alia vox ↺",
+        btnCorregir: "Corrige 🗸",
         btnPresente: "Praesens",
         btnPretImp: "Praeteritum imperfectum",
         btnFutImp: "Futurum imperfectum",

@@ -18,7 +18,7 @@
             <button class="toggle-btn" onclick="toggleSection('dativo', this)">
                 <span id="icon-dativo">+</span>
             </button>
-            <h2 class="dativo">Dativo de posesión</h2>
+            <h2>Dativo de posesión</h2>
             <div id="dativo" class="seccion oculto">
                 <p>
                     El dativo puede usarse con valor posesivo, marcando al poseedor de algo.
@@ -443,7 +443,7 @@
             <button class="toggle-btn" onclick="toggleSection('comparativo', this)">
                 <span id="icon-comparativo">+</span>
             </button>
-            <h2>Comparativo</h2>
+            <h2>Adjetivo comparativo</h2>
             <div id="comparativo" class="seccion oculto">
                 <ul>
                     <li>Inferioridad: minus ... quam ...</li>

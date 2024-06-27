@@ -25,11 +25,11 @@ const textos = {
         btnCorregir: "Corregir 🗸",
         singular: "singular",
         plural: "plural",
-        nominativo: "Nom./Voc.",
-        acusativo: "Acusativo",
-        genitivo: "Genitivo",
-        dativo: "Dativo",
-        ablativo: "Ablativo",
+        nominativo: "nom. / voc.",
+        acusativo: "acusativo",
+        genitivo: "genitivo",
+        dativo: "dativo",
+        ablativo: "ablativo",
         masculino: "masculino",
         femenino: "femenino",
         neutro: "neutro",
@@ -37,14 +37,14 @@ const textos = {
     },
     la: {
         titulo: "Pronomina relativa",
-        btnCorregir: "Castigare 🗸",
+        btnCorregir: "Corrige 🗸",
         singular: "singularis",
         plural: "pluralis",
-        nominativo: "Nom./Voc.",
-        acusativo: "Accusativus",
-        genitivo: "Genitivus",
-        dativo: "Dativus",
-        ablativo: "Ablativus",
+        nominativo: "nom. / voc.",
+        acusativo: "accusativus",
+        genitivo: "genetivus",
+        dativo: "dativus",
+        ablativo: "ablativus",
         masculino: "masculinum",
         femenino: "femininum",
         neutro: "neutrum",
@@ -72,8 +72,8 @@ function aplicarIdioma(codigoIdioma) {
     tablasPlural[2].innerText = textos[codigoIdioma].femenino;
     tablasPlural[3].innerText = textos[codigoIdioma].neutro;
 
-    const labelsSingular = document.getElementById("singular").querySelectorAll("tbody td.cursiva");
-    const labelsPlural = document.getElementById("plural").querySelectorAll("tbody td.cursiva");
+    const labelsSingular = document.getElementById("singular").querySelectorAll("tbody th");
+    const labelsPlural = document.getElementById("plural").querySelectorAll("tbody th");
 
     const labelsText = [
         textos[codigoIdioma].nominativo, textos[codigoIdioma].acusativo,

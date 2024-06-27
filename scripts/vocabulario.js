@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
 const textos = {
     es: {
         titulo: "Vocabulario",
+        cabecera: "español → latín",
         btnCorregir: "Corregir 🗸",
         btnNuevasPalabras: "Nuevas palabras ↺",
         btnSentidoInverso: "Sentido inverso ⇄",
     },
     la: {
         titulo: "Vocabularium",
-        btnCorregir: "Castigare 🗸",
-        btnNuevasPalabras: "Novae voces ↺",
+        cabecera: "hispanice → latine",
+        btnCorregir: "Corrige 🗸",
+        btnNuevasPalabras: "Aliae voces ↺",
         btnSentidoInverso: "Sensus inversus ⇄",
     }
 };
@@ -20,6 +22,7 @@ const textos = {
 function aplicarIdioma(codigoIdioma) {
     document.documentElement.lang = codigoIdioma;
 
+    document.getElementById("cabecera").innerText = textos[codigoIdioma].cabecera;
     document.getElementById("btnCorregir").value = textos[codigoIdioma].btnCorregir;
     document.getElementById("btnNuevasPalabras").innerText = textos[codigoIdioma].btnNuevasPalabras;
     document.getElementById("btnSentidoInverso").innerText = textos[codigoIdioma].btnSentidoInverso;

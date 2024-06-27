@@ -2,6 +2,22 @@
 require_once ("../database.php");
 require_once ("../api.php");
 $sustantivo = getRandomNoun();
+
+$generoSimbolo = '';
+switch ($sustantivo["genero"]) {
+    case 'm':
+        $generoSimbolo = '♂';
+        break;
+    case 'f':
+        $generoSimbolo = '♀';
+        break;
+    case 'n':
+        // ⚲
+        $generoSimbolo = '⚥';
+        break;
+    default:
+        $generoSimbolo = '';
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,10 +34,13 @@ $sustantivo = getRandomNoun();
     <input type="button" name="check" value="Nueva palabra" onclick="recargar()">
     <li class="caja">
         <div>
+            <span id="genero" class="<?php echo $sustantivo["genero"] ?>">
+                <?php echo $generoSimbolo ?>
+            </span>
             <h2 id="nombreLatin">
                 <?php echo $sustantivo["nombre"] ?>
             </h2>
-            <button class="info-icon" onclick="mostrarDeclinacion()">i</button>
+            <button class="info-icon" onclick="mostrarInfo()">i</button>
             <p id="traduccion">
                 <?php echo $sustantivo["traduccion"] ?>
             </p>
@@ -97,7 +116,7 @@ $sustantivo = getRandomNoun();
                 </tbody>
             </table>
         </div>
-        <input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+        <?php include '../widgets/btnCorregir.php'; ?>
     </li>
 
     <script>
@@ -242,18 +261,18 @@ $sustantivo = getRandomNoun();
             }
         }
 
-        function mostrarDeclinacion() {
+        function mostrarInfo() {
             var generoLegible, mensaje;
 
-            if (genero == "m") generoLegible = "masculino";
-            else if (genero == "f") generoLegible = "femenino";
-            else generoLegible = "neutro";
+            if (genero == "m") generoLegible = (getIdiomaActual() == "es") ? "masculino" : "masculinum";
+            else if (genero == "f") generoLegible = (getIdiomaActual() == "es") ? "femenino" : "femininum";
+            else generoLegible = (getIdiomaActual() == "es") ? "neutro" : "neutrum";
 
             if (getIdiomaActual() == "es") {
                 mensaje = "Este sustantivo es " + generoLegible + " y pertenece a la " + declinacion + ".ª declinación";
             }
             else {
-                mensaje = "Hoc substantivum est " + generoLegible + " et ad " + declinacion + "am declinationem pertinet.";
+                mensaje = "Hoc substantivum est " + generoLegible + " et ad " + declinacion + "am declinationem pertinet";
             }
             
             alert(mensaje);

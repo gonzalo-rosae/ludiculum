@@ -1,6 +1,8 @@
 :root {
-    --info: #3498db;
-    --resaltar: orange;
+    --colorPrimario: #df912f;
+    --colorSecundario: #05658b;
+    --info: var(--colorSecundario);
+    --resaltar: var(--colorPrimario);
 }
 
 * {
@@ -8,7 +10,7 @@
 }
 
 .tema-claro {
-    background-color: #ffd0aa;
+    background-color: white;
     color: black;
     border-color: black;
 }
@@ -50,12 +52,20 @@ button {
     width: 100px;
 }
 
+.correccion {
+    color: red;
+}
+
 #btnRetroceso {
     font-size: 30px;
     text-decoration: none;
     position: absolute;
     top: 10px;
     left: 10px;
+    background-color: var(--colorSecundario);
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .caja {

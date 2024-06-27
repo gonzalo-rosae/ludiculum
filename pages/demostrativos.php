@@ -26,7 +26,7 @@
         <?php include '../widgets/tablaSingularPlural.php'; ?>
     </div>
     <br>
-    <input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+    <?php include '../widgets/btnCorregir.php'; ?>
 </body>
 
 </html>

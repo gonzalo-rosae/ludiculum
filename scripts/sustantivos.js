@@ -12,14 +12,14 @@ const textos = {
         ablativo: "ablativo",
     },
     la: {
-        btnNuevaPalabra: "Nova vox ↺",
-        btnCorregir: "Castigare 🗸",
+        btnNuevaPalabra: "Alia vox ↺",
+        btnCorregir: "Corrige 🗸",
         singular: "singularis",
         plural: "pluralis",
         nominativo: "nominativus",
         vocativo: "vocativus",
         acusativo: "accusativus",
-        genitivo: "genitivus",
+        genitivo: "genetivus",
         dativo: "dativus",
         ablativo: "ablativus",
     }

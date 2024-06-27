@@ -7,8 +7,8 @@ const textos = {
     },
     la: {
         titulo: "Exercitia",
-        btnCorregir: "Castigare 🗸",
-        btnOtrosEjercicios: "Nova exercitia ↺",
+        btnCorregir: "Corrige 🗸",
+        btnOtrosEjercicios: "Alia exercitia ↺",
         nota: "Nota: in aliquo exercitio plus quam unum rectum responsum esse potest, sed correctio unam tantum considerat."
     }
 };

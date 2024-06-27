@@ -4,13 +4,11 @@ body {
 }
 
 #contenedorGeneral {
-    width: 660px;
+    width: 710px;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #titulo {
@@ -21,8 +19,8 @@ body {
     font-weight: 700;
     font-style: oblique;
     border-radius: 50%;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: var(--colorSecundario);
+    color: white;
     cursor: pointer;
     border: none;
     outline: none;
@@ -40,8 +38,8 @@ input[type="button"],
     padding: 10px;
     font-size: 14px;
     text-decoration: none;
-    background-color: var(--info);
-    color: #fff;
+    background-color: var(--colorSecundario);
+    color: white;
     border: none;
     cursor: pointer;
     margin-top: 5px;
@@ -78,7 +76,7 @@ table {
     font-size: 15px;
     font-weight: 600;
     width: 50%;
-    background-color: var(--info);
+    background-color: var(--colorSecundario);
     box-shadow: 0;
     border: 0;
     color: white;

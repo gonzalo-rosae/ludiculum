@@ -19,8 +19,8 @@ h2 {
     font-weight: 700;
     font-style: oblique;
     border-radius: 50%;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: var(--colorSecundario);
+    color: white;
     cursor: pointer;
     border: none;
     outline: none;
@@ -42,8 +42,8 @@ input[type="text"] {
 input[type="button"] {
     padding: 10px;
     font-size: 14px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--colorSecundario);
+    color: white;
     border: none;
     cursor: pointer;
     margin-top: 5px;
@@ -71,4 +71,31 @@ input[type="button"] {
 
 #traduccion {
     margin-top: 0 !important;
+}
+
+
+#genero {
+    color: white;
+    margin-right: 3px;
+    border-radius: 20px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 2px;
+}
+
+#genero:hover {
+    cursor: default;
+}
+
+#genero.m {
+    background-color: blue;
+}
+
+#genero.f {
+    background-color: red;
+}
+
+#genero.n {
+    background-color: green;
+    font-size: 18px;
 }

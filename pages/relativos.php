@@ -24,7 +24,7 @@
             quid».
         </p>
         <br>
-        <input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+        <?php include '../widgets/btnCorregir.php'; ?>
     </div>
 </body>
 

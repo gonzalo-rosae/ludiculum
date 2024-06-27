@@ -87,7 +87,7 @@ function corregirEnRango(desde, hasta) {
     var entradas = document.querySelectorAll('input[type="text"]');
     var correcciones = document.querySelectorAll('.correccion');
     var boton = document.getElementById("btnCorregir");
-    var textoBoton = (localStorage.getItem('idioma') === 'es') ? "Corregir" : "Castigare";
+    var textoBoton = (localStorage.getItem('idioma') === 'es') ? "Corregir 🗸" : "Corrige 🗸";
     colorPrevio = entradas[0].style.backgroundColor;
     var clase;
 
@@ -104,7 +104,7 @@ function corregirEnRango(desde, hasta) {
             }
             entradas[i].classList.add(clase);
         }
-        boton.value = (localStorage.getItem("idioma") === 'es') ? "Limpiar" : "Delere";
+        boton.value = (localStorage.getItem("idioma") === 'es') ? "Limpiar 🗑" : "Dele 🗑";
     }
     else {
         limpiarCampos();
