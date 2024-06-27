@@ -5,8 +5,7 @@ CREATE TABLE sustantivos (
     declinacion INT,
     genero VARCHAR(10),
     regularidad VARCHAR(10),
-    apariciones_d INT DEFAULT 0,
-    apariciones_v INT DEFAULT 0
+    utilizado TINYINT(1) DEFAULT 0
 );
 
 /*
@@ -61,7 +60,6 @@ VALUES
     ('spes', 'esperanza', 5, 'f', ''),
     ('species', 'vista', 5, 'f', ''),
     ('fides', 'fe', 5, 'f', ''),
-
     ('insula', 'isla', 1, 'f', ''),
     ('sella', 'silla', 1, 'f', ''),
     ('fenestra', 'ventana', 1, 'f', ''),
@@ -88,7 +86,6 @@ VALUES
     ('catella', 'perrita', 1, 'f', ''),
     ('casa', 'cabaña/choza', 1, 'f', ''),
     ('pugna', 'lucha', 1, 'f', ''),
-
     ('deus', 'dios', 2, 'm', ''),
     ('magister', 'maestro', 2, 'm', ''),
     ('agnus', 'cordero', 2, 'm', ''),
@@ -114,7 +111,6 @@ VALUES
     ('oppidum', 'fortaleza', 2, 'n', ''),
     ('scutum', 'escudo', 2, 'n', ''),
     ('vitium', 'vicio/defecto', 2, 'n', ''),
-
     ('miles', 'soldado', 3, 'm', 't'),
     ('virtus', 'virtud', 3, 'f', 't'),
     ('aries', 'carnero/ariete', 3, 'm', 't'),
@@ -125,34 +121,28 @@ VALUES
     ('crudelitas', 'crueldad', 3, 'f', 't'),
     ('pietas', 'piedad', 3, 'f', 't'),
     ('ius', 'ley/derecho', 3, 'n', 's'),
-
     ('arcus', 'arco', 4, 'm', ''),
     ('cursus', 'carrera/curso', 4, 'm', ''),
     ('ductus', 'conducción', 4, 'm', ''),
     ('exercitus', 'ejército', 4, 'm', ''),
     ('eventus', 'resultado', 4, 'm', ''),
-
     ('meridies', 'mediodía', 5, 'm', ''),
     ('series', 'serie/sucesión', 5, 'f', '');
 
 /* parva, magna, aperta, clausa, laboriosa, laeta, sordida, alba, rubra, pulchra, fessa, bona, vera */
 /* latus, callidus, mundus, sordidus, timidus, bonus, carus, pulcher, iniustus, frigidus, fuscus, niger, albus, curatus, frugiler, lepidus, nullus, subiectus, turbulentus */
 /* antiquitus (en la antiguedad), igitur (asi pues), neque (ni), nunc (ahora), verbi gratia (por ejemplo) */
-
 /* inscriptio, aedificium, periculum */
-
 /* libertas, ignorantia, ignus?, aqua, consilium?, exemplum, parentis?, liber, oris?, oratio, mel, aurum, nox, aestas */
 /* odium, amor, mulier, somnus, mors, lingua, sententia */
-
 /* felix, miser, gratia, basium, theatrum, omnium?, ebrius, barbarus, iuventus?, senectus?, itiner?, nympha */
 /* urbs, cubiculum, balneum, culina, sol, pluvia */
-
 CREATE TABLE verbos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(25) NOT NULL,
     traduccion VARCHAR(50) NOT NULL,
     conjugacion INT,
-    apariciones INT DEFAULT 0
+    utilizado TINYINT(1) DEFAULT 0
 );
 
 INSERT INTO
@@ -168,7 +158,7 @@ CREATE TABLE ejercicios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     solucion VARCHAR(255) NOT NULL,
-    apariciones INT DEFAULT 0
+    utilizado TINYINT(1) DEFAULT 0
 );
 
 INSERT INTO

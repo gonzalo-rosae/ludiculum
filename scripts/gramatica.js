@@ -67,7 +67,7 @@ const textos = {
         neutro: "neutrum",
 
         conjuncion: "Coniunctio",
-        conjunciones: "Coniuctiones",
+        conjunciones: "Coniunctiones",
         tipo: "Genus",
         ejemplos: "Exempla"
     }

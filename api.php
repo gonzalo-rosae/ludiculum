@@ -1,42 +1,24 @@
 <?php
 
 // Funciones auxiliares
-function incrementar($campo, $data, $tabla)
+function alternarUtilizado($data, $tabla)
 {
     global $db_conn;
     global $mysqli;
 
     $nombre = $data['nombre'];
-    $update_query = "UPDATE $tabla SET $campo = $campo + 1 WHERE nombre = '$nombre'";
+    $update_query = "UPDATE $tabla SET utilizado = NOT utilizado WHERE nombre = '$nombre'";
     mysqli_query($db_conn, $update_query) or die(mysqli_error($mysqli));
 }
 
-
-
-// Funciones propiamente API
-
-function crearBaseDatos()
+function resetUtilizados($tabla)
 {
     global $db_conn;
     global $mysqli;
 
-    // Nombre del archivo SQL
-    $sql_file = 'db.sql';
-
-    // Leer el contenido del archivo SQL
-    $sql = file_get_contents($sql_file);
-
-    // Ejecutar las consultas SQL
-    if (mysqli_multi_query($db_conn, $sql)) {
-        do {
-            // almacenar resultados
-            if ($result = mysqli_store_result($db_conn)) {
-                mysqli_free_result($result);
-            }
-        } while (mysqli_next_result($db_conn));
-    }
+    $update_query = "UPDATE $tabla SET utilizado = 0";
+    mysqli_query($db_conn, $update_query) or die(mysqli_error($mysqli));
 }
-
 
 function getRandomNouns($cantidad)
 {
@@ -44,38 +26,57 @@ function getRandomNouns($cantidad)
 
     $nouns = array();
 
-    // Realizar una sola consulta para obtener todos los sustantivos necesarios
+    // Realizar la consulta para obtener sustantivos no utilizados recientemente
     $query = "SELECT id, nombre, traduccion, declinacion, genero, regularidad FROM sustantivos 
-              ORDER BY apariciones_v ASC, RAND() LIMIT $cantidad";
+              WHERE utilizado = 0
+              ORDER BY RAND() LIMIT $cantidad";
     
     $result = mysqli_query($db_conn, $query);
     
     if (!$result) {
-        die("Query failed: " . mysqli_error($db_conn));
+        die("Consulta fallada: " . mysqli_error($db_conn));
+    }
+
+    // Si no hay resultados, realizar el "reset" y ejecutar la consulta de nuevo
+    if (mysqli_num_rows($result) == 0) {
+        resetUtilizados('sustantivos');
+        $result = mysqli_query($db_conn, $query);
+        if (!$result) {
+            die("Consulta fallada: " . mysqli_error($db_conn));
+        }
     }
 
     // Iterar sobre los resultados de la consulta
     while ($data = mysqli_fetch_array($result)) {
-        incrementar("apariciones_v", $data, "sustantivos");
+        alternarUtilizado($data, "sustantivos");
         $nouns[] = $data;
     }
 
     return $nouns;
 }
 
-
-
-
 function getRandomNoun()
 {
     global $db_conn;
     global $mysqli;
 
-    $query = "SELECT nombre, traduccion, declinacion, genero, regularidad FROM sustantivos ORDER BY apariciones_d ASC, RAND() LIMIT 1";
+    $query = "SELECT nombre, traduccion, declinacion, genero, regularidad FROM sustantivos 
+              WHERE utilizado = 0
+              ORDER BY RAND() LIMIT 1";
     $result = mysqli_query($db_conn, $query) or die(mysqli_error($mysqli));
+
+    // Si no hay resultados, realizar el "reset" y ejecutar la consulta de nuevo
+    if (mysqli_num_rows($result) == 0) {
+        resetUtilizados('sustantivos');
+        $result = mysqli_query($db_conn, $query);
+        if (!$result) {
+            die("Consulta fallada: " . mysqli_error($db_conn));
+        }
+    }
+
     $data = mysqli_fetch_array($result);
 
-    incrementar("apariciones_d", $data, "sustantivos");
+    alternarUtilizado($data, "sustantivos");
 
     return $data;
 }
@@ -85,30 +86,54 @@ function getRandomVerb()
     global $db_conn;
     global $mysqli;
 
-    $query = "SELECT nombre, traduccion, conjugacion FROM verbos ORDER BY apariciones ASC, RAND() LIMIT 1";
+    $query = "SELECT nombre, traduccion, conjugacion FROM verbos 
+              WHERE utilizado = 0
+              ORDER BY RAND() LIMIT 1";
     $result = mysqli_query($db_conn, $query) or die(mysqli_error($mysqli));
+
+    // Si no hay resultados, realizar el "reset" y ejecutar la consulta de nuevo
+    if (mysqli_num_rows($result) == 0) {
+        resetUtilizados('verbos');
+        $result = mysqli_query($db_conn, $query);
+        if (!$result) {
+            die("Consulta fallada: " . mysqli_error($db_conn));
+        }
+    }
+
     $data = mysqli_fetch_array($result);
 
-    incrementar("apariciones", $data, "verbos");
+    alternarUtilizado($data, "verbos");
 
     return $data;
 }
-
 
 function getRandomExercises($limit)
 {
     global $db_conn;
     global $mysqli;
 
-    $query = "SELECT nombre, solucion FROM ejercicios ORDER BY apariciones ASC, RAND() LIMIT $limit";
+    $query = "SELECT nombre, solucion FROM ejercicios 
+              WHERE utilizado = 0
+              ORDER BY RAND() LIMIT $limit";
     $result = mysqli_query($db_conn, $query) or die(mysqli_error($mysqli));
+
+    // Si no hay resultados, realizar el "reset" y ejecutar la consulta de nuevo
+    if (mysqli_num_rows($result) == 0) {
+        resetUtilizados('ejercicios');
+        $result = mysqli_query($db_conn, $query);
+        if (!$result) {
+            die("Consulta fallada: " . mysqli_error($db_conn));
+        }
+    }
+
     $data = array();
     while ($row = mysqli_fetch_array($result)) {
-        incrementar("apariciones", $row, "ejercicios");
+        alternarUtilizado($row, "ejercicios");
         $data[] = $row;
     }
 
     return $data;
 }
+
 
 ?>

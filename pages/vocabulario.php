@@ -84,7 +84,7 @@
     }
 
     function recargar() {
-        fetch('../getVocabulario.php')
+    fetch('../asyncQueries/getVocabulario.php')
             .then(response => response.json())
             .then(data => {
                 palabras = data;
