@@ -15,13 +15,11 @@ $ejercicios = getRandomExercises(5);
 
 <body>
     <?php include '../widgets/btnRetroceso.php'; ?>
-    <div>
-        <h2 id="titulo">
-            Ejercicios
-        </h2>
-    </div>
-    <hr>
+    <h2 id="titulo">
+        Ejercicios
+    </h2>
     <?php include '../widgets/btnRecarga.php'; ?>
+    <hr>
     <div>
         <?php
         for ($i = 0; $i < 5; $i++) {

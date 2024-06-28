@@ -11,9 +11,9 @@ CREATE TABLE sustantivos (
 /*
  regularidad:
  ""            → regular; desinencias por defecto
- "$consonante" → semirregular; a partir de la consonante, puedo generar la declinación
- "irregular"   → irregular; necesito consultar todas sus formas ad hoc
- */
+ "$consonante" → semirregular; a partir de la consonante puedo generar la declinación
+ "irregular"   → irregular; necesito consultar todas sus formas "ad hoc"
+*/
 INSERT INTO
     sustantivos (
         nombre,
@@ -44,7 +44,7 @@ VALUES
     ('lac', 'leche', 3, 'n', 't'),
     ('lex', 'ley', 3, 'f', 'g'),
     ('rex', 'rey', 3, 'm', 'g'),
-    ('dux', 'líder/duque', 3, 'm', 'c'),
+    ('dux', 'líder/general', 3, 'm', 'c'),
     ('lux', 'luz', 3, 'f', 'c'),
     ('legio', 'legión', 3, 'f', 'n'),
     ('leo', 'león', 3, 'm', 'n'),
