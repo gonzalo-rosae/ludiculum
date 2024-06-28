@@ -39,21 +39,21 @@
     font-style: italic;
 }
 
+.correccion {
+    color: red;
+}
+
 button {
     cursor: pointer;
 }
 
 #btnCorregir {
-    font-weight: bold;
     background-color: red;
+    border: 2px solid red;
     position: fixed;
     right: 10px;
     bottom: 20px;
-    width: 100px;
-}
-
-.correccion {
-    color: red;
+    width: 90px;
 }
 
 #btnRetroceso {
@@ -63,9 +63,14 @@ button {
     top: 10px;
     left: 10px;
     background-color: var(--colorSecundario);
+    border: 2px solid var(--colorSecundario);
     color: white;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.btnFeedback:hover {
+    border: 2px solid white !important;
 }
 
 .caja {
@@ -87,4 +92,9 @@ button {
     left: 20px;
     top: 20px;
     width: 120px;
+}
+
+#btnRecarga {
+    background-color: var(--colorSecundario);
+    border: 2px solid var(--colorSecundario);
 }

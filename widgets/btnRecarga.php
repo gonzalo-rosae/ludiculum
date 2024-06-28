@@ -1,0 +1,1 @@
+<input id="btnRecarga" class="btnFeedback" type="button" name="check" onclick="recargar()">

@@ -31,7 +31,7 @@ switch ($sustantivo["genero"]) {
 
 <body>
     <?php include '../widgets/btnRetroceso.php'; ?>
-    <input type="button" name="check" value="Nueva palabra" onclick="recargar()">
+    <?php include '../widgets/btnRecarga.php'; ?>
     <li class="caja">
         <div>
             <h2 id="nombreLatin">

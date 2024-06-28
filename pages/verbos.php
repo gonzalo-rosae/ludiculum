@@ -30,7 +30,7 @@ $verb = getRandomVerb();
         <button id="futPerf" class="tiempo" onclick="elegirTiempo('futPerf')">Futuro perfecto</button>
         <button id="pretPlusc" class="tiempo" onclick="elegirTiempo('pretPlusc')">Pretérito pluscuamperfecto</button>
     </nav>
-    <input type="button" name="check" value="Nueva palabra" onclick="recargar()">
+    <?php include '../widgets/btnRecarga.php'; ?>
     <li class="caja">
         <div>
             <h2 id="nombreLatin">

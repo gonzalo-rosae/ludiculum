@@ -1,1 +1,1 @@
-<input id="btnCorregir" type="button" name="check" value="Corregir" onclick="corregir()">
+<input id="btnCorregir" class="btnFeedback" type="button" name="check" value="Corregir" onclick="corregir()">

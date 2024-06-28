@@ -21,7 +21,7 @@ $ejercicios = getRandomExercises(5);
         </h2>
     </div>
     <hr>
-    <input type="button" name="check" value="Otros ejercicios" onclick="recargar()">
+    <?php include '../widgets/btnRecarga.php'; ?>
     <div>
         <?php
         for ($i = 0; $i < 5; $i++) {

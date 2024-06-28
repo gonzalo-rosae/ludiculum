@@ -1,1 +1,1 @@
-<a href="../index.php" id="btnRetroceso">↩</a>
+<a href="../index.php" id="btnRetroceso" class="btnFeedback">↩</a>
