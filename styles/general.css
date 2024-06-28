@@ -72,3 +72,19 @@ button {
     border: 2px solid;
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.ayuda:hover {
+    cursor: help !important;
+}
+
+#btnTema {
+    right: 20px;
+    top: 20px;
+    width: 50px;
+}
+
+#btnIdioma {
+    left: 20px;
+    top: 20px;
+    width: 120px;
+}

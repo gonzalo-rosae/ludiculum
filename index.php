@@ -17,8 +17,7 @@ require_once ("database.php");
 </head>
 
 <body>
-    <button id="btnIdioma" onclick="cambiarIdioma()">Cambiar idioma</button>
-    <button id="btnTema" onclick="cambiarTema()">Cambiar tema</button>
+    <?php include 'widgets/btnIdiomaTema.php'; ?>
     <div id="titulo">Ludiculum</div>
     <div id="envoltorio">
         <div>

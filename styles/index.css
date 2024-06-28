@@ -1,5 +1,5 @@
 body {
-    background-image: url("../assets/bg2.jpg") !important;
+    background-image: url("../assets/bg.jpg") !important;
 }
 
 #titulo {
@@ -86,18 +86,6 @@ button {
     width: 150px;
     border-radius: 3px;
     padding: 10px;
-}
-
-#btnTema {
-    right: 20px;
-    top: 20px;
-    width: 50px;
-}
-
-#btnIdioma {
-    left: 20px;
-    top: 20px;
-    width: 120px;
 }
 
 #titulo {

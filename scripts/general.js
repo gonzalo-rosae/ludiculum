@@ -70,6 +70,14 @@ function cambiarTema() {
 }
 
 
+function cambiarIdioma() {
+    let idiomaActual = localStorage.getItem('idioma');
+    const nuevoIdioma = idiomaActual === "es" ? "la" : "es";
+    localStorage.setItem('idioma', nuevoIdioma);
+    aplicarIdioma(nuevoIdioma);
+}
+
+
 function insertarTema(nodo) {
     var clase = "tema-" + getTemaActual();
     nodo.classList.add(clase);

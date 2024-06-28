@@ -43,13 +43,6 @@ const textos = {
     }
 };
 
-function cambiarIdioma() {
-    let idiomaActual = localStorage.getItem('idioma');
-    const nuevoIdioma = idiomaActual === "es" ? "la" : "es";
-    localStorage.setItem('idioma', nuevoIdioma);
-    aplicarIdioma(nuevoIdioma);
-}
-
 function aplicarIdioma(codigoIdioma) {
     document.documentElement.lang = codigoIdioma;
     document.getElementById("btnTema").innerText = (getTemaActual() == "claro") ? "🌑" : "☀️";

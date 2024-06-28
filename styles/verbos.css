@@ -78,3 +78,27 @@ input[type="button"] {
     border-radius: 3px;
     outline: none;
 }
+
+#conjugacion {
+    cursor: pointer;
+    background-color: var(--colorPrimario);
+}
+
+#conjugacion.ayuda {
+    font-family: serif;
+}
+
+#conjugacion {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    border: 1px solid white;
+    vertical-align: middle;
+    line-height: 1.6;
+    margin-top: -6px;
+}
+
+#nombreLatin {
+    margin-right: 4px;
+}
