@@ -16,11 +16,8 @@ $verb = getRandomVerb();
 
 <body>
     <?php include '../widgets/btnRetroceso.php'; ?>
-    <div>
-        <h2 id="titulo">
-            Verbos
-        </h2>
-    </div>
+    <?php include '../widgets/btnRecarga.php'; ?>
+    <h2 id="titulo">Verbos</h2>
     <hr>
     <nav>
         <button id="presente" class="tiempo" onclick="elegirTiempo('presente')">Presente</button>
@@ -30,12 +27,11 @@ $verb = getRandomVerb();
         <button id="futPerf" class="tiempo" onclick="elegirTiempo('futPerf')">Futuro perfecto</button>
         <button id="pretPlusc" class="tiempo" onclick="elegirTiempo('pretPlusc')">Pretérito pluscuamperfecto</button>
     </nav>
-    <?php include '../widgets/btnRecarga.php'; ?>
     <li class="caja">
         <div>
-            <h2 id="nombreLatin">
+            <h3 id="nombreLatin">
                 <?php echo $verb["nombre"] ?>
-            </h2>
+            </h3>
             <span id="conjugacion" class="infoSustantivo" onclick="mostrarConjugacion()">?</span>
             <p id="traduccion">
                 <?php echo $verb["traduccion"] ?>

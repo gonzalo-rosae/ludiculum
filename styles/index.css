@@ -71,12 +71,8 @@ a.button {
     margin-right: 10px;
 }
 
-a.button.tema-claro:hover {
-    border: solid 3px black;
-}
-
-a.button.tema-oscuro:hover {
-    border: solid 3px white;
+a.button:hover {
+    border: solid 3px currentColor;
 }
 
 button {
